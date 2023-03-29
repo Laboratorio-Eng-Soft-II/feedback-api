@@ -13,7 +13,7 @@ export class Feedback {
     target: string
 
     @Column()
-    cpf_cnpj: string
+    nusp_cnpj: string
 
     @Column('int', { nullable: true, array: true })
     answers: number[]

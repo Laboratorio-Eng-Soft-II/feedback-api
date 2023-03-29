@@ -11,9 +11,9 @@ export class FeedbackController {
     }
 
     async allFromSingle(request: Request, response: Response, next: NextFunction) {
-        const cpf_cnpj = request.params.cpf_cnpj
+        const nusp_cnpj = request.params.nusp_cnpj
         const company = await this.feedbackRepository.find({
-            where: { cpf_cnpj }
+            where: { nusp_cnpj }
         })
 
         if (!company) {
@@ -37,14 +37,14 @@ export class FeedbackController {
     async save(request: Request, response: Response, next: NextFunction) {
         const { author,
                 target,
-                cpf_cnpj,
+                nusp_cnpj,
                 answers,
                 comments } = request.body;
         
         const company = Object.assign(new Feedback(), {
             author,
             target,
-            cpf_cnpj,
+            nusp_cnpj,
             answers,
             comments
         })

@@ -7,7 +7,7 @@ export const Routes = [{
     action: "all"
 }, {
     method: "get",
-    route: "/feedback/:cpf_cnpj",
+    route: "/feedback/:nusp_cnpj",
     controller: FeedbackController,
     action: "allFromSingle"
 }, {
