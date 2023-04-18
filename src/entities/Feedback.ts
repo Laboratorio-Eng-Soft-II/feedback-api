@@ -13,7 +13,10 @@ export class Feedback {
     target: string
 
     @Column()
-    nusp_cnpj: string
+    author_nusp_cnpj: string
+
+    @Column()
+    target_nusp_cnpj: string
 
     @Column('int', { nullable: true, array: true })
     answers: number[]
