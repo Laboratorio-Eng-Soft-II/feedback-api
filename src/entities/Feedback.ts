@@ -12,10 +12,10 @@ export class Feedback {
     @Column()
     target: string
 
-    @Column()
+    @Column({ nullable: true, default: 0 })
     author_nusp_cnpj: string
 
-    @Column()
+    @Column({ nullable: true, default: 0 })
     target_nusp_cnpj: string
 
     @Column('int', { nullable: true, array: true })
